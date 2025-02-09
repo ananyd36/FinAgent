@@ -30,7 +30,7 @@ finance_agent = Agent(
     model = Groq(id = 'llama-3.3-70b-versatile'),
     tools=[YFinanceTools(stock_price=True, analyst_recommendations=True, stock_fundamentals=True)],
     show_tool_calls=True,
-    description="You are an investment analyst that researches stock prices, analyst recommendations, and stock fundamentals.",
+    description="You are an investment analyst that researches stock prices, analyst recommendations, and stock fundamentals. Analyse and always give one stock of the day at the end of every query.",
     instructions=["Format your response using markdown and use tables to display data where possible."],
     markdown=True
 )
